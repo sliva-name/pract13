@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:onClick="triangleButton_Click"
+    tools:context=".TriangleActivity">
+
+
+    <TextView
+        android:id="@+id/textView1Side"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/side1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.073"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.044" />
+
+    <EditText
+        android:id="@+id/editText1Side"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/edit1"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toStartOf="@+id/textView1Side"
+        app:layout_constraintTop_toBottomOf="@+id/textView1Side" />
+
+    <TextView
+        android:id="@+id/textView2Side"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/side2"
+        app:layout_constraintStart_toStartOf="@+id/editText1Side"
+        app:layout_constraintTop_toBottomOf="@+id/editText1Side" />
+
+    <EditText
+        android:id="@+id/editText2Side"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/edit2"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toStartOf="@+id/textView2Side"
+        app:layout_constraintTop_toBottomOf="@+id/textView2Side" />
+
+    <TextView
+        android:id="@+id/textViewHypotenuse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/hypotenuse"
+        app:layout_constraintStart_toStartOf="@+id/editText2Side"
+        app:layout_constraintTop_toBottomOf="@+id/editText2Side" />
+
+    <TextView
+        android:id="@+id/textViewPerimeter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/perimeter"
+        app:layout_constraintStart_toStartOf="@+id/textViewHypotenuse"
+        app:layout_constraintTop_toBottomOf="@+id/textViewHypotenuse" />
+
+    <TextView
+        android:id="@+id/textViewArea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/area"
+        app:layout_constraintStart_toStartOf="@+id/textViewPerimeter"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPerimeter" />
+
+    <Button
+        android:id="@+id/buttonCalculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:onClick="calculateButton_Click"
+        android:text="@string/calculate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.468"
+        app:layout_constraintStart_toStartOf="@+id/textViewArea"
+        app:layout_constraintTop_toBottomOf="@+id/textViewArea" />
+
+    <Button
+        android:id="@+id/buttonBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="180dp"
+        android:onClick="buttonBack_Click"
+        android:text="@string/change"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.892"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCalculate" />
+</androidx.constraintlayout.widget.ConstraintLayout>
